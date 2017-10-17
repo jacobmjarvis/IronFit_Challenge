@@ -1,0 +1,51 @@
+<div class="row">
+  <center>
+    <!-- Left side (ready to eat) -->
+    <div class="col-md-6">
+      <h4 class="white_font">IronFit Challenges Placed:</h4>
+      <div id="ready_to_eat">
+
+        <!-- Dynamically Insert Ready Burgers Here -->
+        {{#each burgers}}
+          {{#unless devoured}}
+            <form action="burger/eat/{{id}}" method="POST">
+              <div class="input-group col-md-12 col-xs-12">
+                <li class="form-control">
+                 <div class="col-md-7 col-xs-7">{{id}}. {{burger_name}}</div>
+                 <div class="col-md-5 col-xs-5"><input name="burgerEater" type="text" class="form-control bugerEaterTextBox" placeholder="Challenger Name"></div>
+                </li>
+                <span class="input-group-btn devour-button">
+                  <button class="btn btn-success devour-button" type="submit">I did it!</button>
+                </span>
+              </div>
+            </form>              
+          {{/unless}}
+        {{/each}}
+
+      </div>
+    </div>
+
+    <!-- Right side (already eaten) -->
+    <div class="col-md-6">
+      <h4 class="white_font">IronFit Challenges Completed:</h4>
+      <div id="already_eaten">
+
+        <!-- Dynamically Insert Eaten Burgers Here -->
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group col-md-12 col-xs-12">
+              <li class="form-control">
+                <div class="col-md-6 col-xs-6">{{this.id}}. {{this.burger_name}}</div>
+                <div class="col-md-6 col-xs-6"><i>({{this.devourer.devourer_name}})</i></div>
+              </li>
+              <span class="input-group-btn">
+                <button class="btn btn-info whine-button" type="button">Congrats!</button>
+              </span>
+            </div>
+          {{/if}}
+        {{/each}}
+
+      </div>
+    </div>
+  </center>
+</div>
