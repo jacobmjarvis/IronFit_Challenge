@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "burgers_db",
-    "host": "127.0.0.1",
+    "username": "sql9199956",
+    "password": "IfdFmEpQyy",
+    "database": "sql9199956",
+    "host": "http://sql9.freemysqlhosting.net/",
     "dialect": "mysql"
   }
 }
