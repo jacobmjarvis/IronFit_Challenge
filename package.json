@@ -2,11 +2,9 @@
   "name": "ironfit_challenge",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
-    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -18,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/jacobmjarvis/IronFit_Challenge/issues"
   },
-  "homepage": "https://github.com/jacobmjarvis/IronFit_Challenge#readme"
+  "homepage": "https://github.com/jacobmjarvis/IronFit_Challenge#readme",
+    "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mysql": "^2.12.0",
+    "mysql2": "^1.4.2",
+    "sequelize": "^3.25.0",
+    "sequelize-cli": "^2.4.0"
+  }
 }
